@@ -9,7 +9,7 @@ public class Game {
 	Game() {
 		View v = new View();
 		v.home();
-		// v.playerSelect();
-		// v.gameScreen();
+		v.playerSelect();
+		v.gameScreen();
 	}
 }
