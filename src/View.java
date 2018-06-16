@@ -20,7 +20,7 @@ public class View implements ActionListener{
 	JButton Player4Button = new JButton();
 	JFrame playerSelectFrame = new JFrame();
 	JPanel player = new JPanel();
-	JFrame gameFrame = new JFrame();
+	GameScreen gameFrame = new GameScreen();
 	void home() {
 		homeFrame.setSize(1000, 1000);
 		JPanel panel = new JPanel();
@@ -33,7 +33,7 @@ public class View implements ActionListener{
 		panel.setLayout(null);
 		panel.add(startButton);
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(new View().getClass().getResourceAsStream("start.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("start.png")));
 			startButton.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -63,28 +63,28 @@ public class View implements ActionListener{
 		panel.add(Player4Button);
 		playerSelectFrame.setVisible(false);
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(new View().getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			Player1Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(new View().getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			Player2Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(new View().getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			Player3Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(new View().getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			Player4Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -92,14 +92,16 @@ public class View implements ActionListener{
 		}
 	}
 
-	void gameScreen() {
+	/*void gameScreen() {
 		gameFrame.setSize(1000, 1000);
 		JPanel panel = new JPanel();
 		gameFrame.add(panel);
 		panel.setBackground(Color.GREEN);
 		panel.setOpaque(true);
 		gameFrame.setVisible(false);
+		
 	}
+	*/
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

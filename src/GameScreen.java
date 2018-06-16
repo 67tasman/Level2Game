@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -10,8 +11,8 @@ import javax.swing.JPanel;
 public class GameScreen extends JFrame{
 		
 	//Constants
-	public final int HEIGHT = 200;
-	public final int WIDTH = 300;
+	public final int HEIGHT = 1000;
+	public final int WIDTH = 1000;
 	
 	public GameScreen() {
 		super();
@@ -20,26 +21,41 @@ public class GameScreen extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//Layout setup
-		GridLayout grid = new GridLayout(2,2,0,0);
+		GridLayout grid = new GridLayout(10,10,0,0);
 		setLayout(grid);
 		
 		//Panel setup
-		JPanel p1 = new JPanel();
-		JPanel p2 = new JPanel();
-		p2.setBackground(Color.BLUE);
-		JPanel p3 = new JPanel();
-		p3.setBackground(Color.green);
-		JPanel p4 = new JPanel();
-		p4.setBackground(Color.CYAN);
+	
+		JPanel[][] panel = new JPanel[10][10];
+		for(int i = 0 ; i<10 ; i++) {
+			for(int a = 0 ; a<10 ; a++) {
+				panel[i][a]= new JPanel();
+				panel[i][a].setBackground(Color.GRAY);
+			}
+		}
+		
+		
 		
 		//Adding Panels
-		add(p1); 
-		add(p2);
-		add(p3);
-		add(p4);
+		for(int i = 0 ; i<10 ; i++) {
+			for(int a = 0 ; a<10 ; a++) {
+				add(panel[i][a]);
+			}
+		}
+		
+		//Creating labels
+		JLabel l = new JLabel();
+		try {
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rock.png")));
+			l.setIcon(icon);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		panel[0][0].add(l);
 		
 		//Other
-		setVisible(true);
+		setVisible(false);
 		
 	}
 }
