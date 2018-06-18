@@ -10,13 +10,21 @@ import javax.swing.JPanel;
 
 public class GameScreen extends JFrame{
 		
-	//Constants
+	//Variables
 	public final int HEIGHT = 1000;
 	public final int WIDTH = 1000;
+	JPanel[][] panel = new JPanel[10][10];
 	
+	//Player Variables
+	int playerX;
+	int playerY;
+	
+	//Constructor
 	public GameScreen() {
 		super();
-		
+		playerX = 0;
+		playerY = 0;
+
 		setSize(HEIGHT, WIDTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -25,8 +33,7 @@ public class GameScreen extends JFrame{
 		setLayout(grid);
 		
 		//Panel setup
-	
-		JPanel[][] panel = new JPanel[10][10];
+		
 		for(int i = 0 ; i<10 ; i++) {
 			for(int a = 0 ; a<10 ; a++) {
 				panel[i][a]= new JPanel();
@@ -41,6 +48,7 @@ public class GameScreen extends JFrame{
 			for(int a = 0 ; a<10 ; a++) {
 				add(panel[i][a]);
 			}
+			
 		}
 		
 		//Creating labels
@@ -56,6 +64,52 @@ public class GameScreen extends JFrame{
 		
 		//Other
 		setVisible(false);
-		
+		addKeyListener(new Movement(this));
+	}
+	void showPlayerMove() {
+		JLabel l = new JLabel();
+		try {
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rock.png")));
+			l.setIcon(icon);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		panel[playerY][playerX].setBackground(Color.BLUE);
+	}
+	
+	
+	void tryMoveLeft() {
+		if(playerX>0) {
+			panel[playerY][playerX].setBackground(Color.GRAY);
+			playerX -= 1;
+			showPlayerMove();
+		}
+		System.out.println("hi");
+	
+	}
+	void tryMoveRight() {
+		if(playerX<9) {
+			panel[playerY][playerX].setBackground(Color.GRAY);
+			playerX += 1;
+			showPlayerMove();
+
+		}
+	}
+	void tryMoveUp() {
+		if(playerY>0) {
+			panel[playerY][playerX].setBackground(Color.GRAY);
+			playerY -= 1;
+			showPlayerMove();
+
+		}
+	}
+	void tryMoveDown() {
+		if(playerY<9) {
+			panel[playerY][playerX].setBackground(Color.GRAY);
+			playerY += 1;
+			showPlayerMove();
+
+		}
 	}
 }
