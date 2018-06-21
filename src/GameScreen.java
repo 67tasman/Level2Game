@@ -14,6 +14,7 @@ public class GameScreen extends JFrame{
 	public final int HEIGHT = 1000;
 	public final int WIDTH = 1000;
 	JPanel[][] panel = new JPanel[10][10];
+	JLabel l;
 	
 	//Player Variables
 	int playerX;
@@ -52,9 +53,9 @@ public class GameScreen extends JFrame{
 		}
 		
 		//Creating labels
-		JLabel l = new JLabel();
+		l = new JLabel();
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rock.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			l.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -64,18 +65,21 @@ public class GameScreen extends JFrame{
 		
 		//Other
 		setVisible(false);
-		addKeyListener(new Movement(this));
+		addKeyListener(new Movement(this)); 
 	}
 	void showPlayerMove() {
-		JLabel l = new JLabel();
+		l = new JLabel();
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rock.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			l.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		panel[playerY][playerX].setBackground(Color.BLUE);
+		//panel[playerY][playerX].setBackground(Color.BLUE);
+		panel[playerY][playerX].add(l); 
+		l.setLocation(playerX, playerY);
+		
 	}
 	
 	

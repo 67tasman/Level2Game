@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.w3c.dom.css.RGBColor;
+
 public class View implements ActionListener{
 	JButton startButton = new JButton();
 	JFrame homeFrame = new JFrame();
@@ -48,10 +50,11 @@ public class View implements ActionListener{
 		playerSelectFrame.setSize(1000, 1000);
 		JPanel panel = new JPanel();
 		playerSelectFrame.add(panel);
-		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setBackground(new Color(200,230,250));;;
 		panel.setOpaque(true);
-		JLabel label = new JLabel("          Player Select          \n");
+		JLabel label = new JLabel("  Player Select                            \n");
 		label.setFont(font);
+		label.setForeground(Color.MAGENTA);
 		panel.add(label);
 		Player1Button.addActionListener(this);
 		Player2Button.addActionListener(this);
@@ -70,21 +73,21 @@ public class View implements ActionListener{
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player2.png")));
 			Player2Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player3.png")));
 			Player3Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player4.jpg")));
 			Player4Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
