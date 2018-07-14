@@ -64,6 +64,7 @@ public class View implements ActionListener{
 		panel.add(Player2Button);
 		panel.add(Player3Button);
 		panel.add(Player4Button);
+		//if statement- set player to player select button
 		playerSelectFrame.setVisible(false);
 		try {
 			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
