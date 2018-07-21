@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.w3c.dom.css.RGBColor;
+
 public class View implements ActionListener{
 	JButton startButton = new JButton();
 	JFrame homeFrame = new JFrame();
@@ -39,19 +41,20 @@ public class View implements ActionListener{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		startButton.setBounds(275, 400, 450 ,150);
+		startButton.setBounds(275, 350, 450 ,150);
 
 	}
 
 	void playerSelect() {
-		Font font = new Font(Font.SERIF, Font.BOLD, 80);
+		Font font = new Font(Font.DIALOG_INPUT,Font.CENTER_BASELINE, 80);
 		playerSelectFrame.setSize(1000, 1000);
 		JPanel panel = new JPanel();
 		playerSelectFrame.add(panel);
-		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setBackground(new Color(0,0,0));
 		panel.setOpaque(true);
-		JLabel label = new JLabel("          Player Select          \n");
+		JLabel label = new JLabel("           Player Select                           \n");
 		label.setFont(font);
+		label.setForeground(Color.ORANGE);
 		panel.add(label);
 		Player1Button.addActionListener(this);
 		Player2Button.addActionListener(this);
@@ -61,6 +64,7 @@ public class View implements ActionListener{
 		panel.add(Player2Button);
 		panel.add(Player3Button);
 		panel.add(Player4Button);
+		//if statement- set player to player select button
 		playerSelectFrame.setVisible(false);
 		try {
 			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
@@ -70,21 +74,21 @@ public class View implements ActionListener{
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player2.png")));
 			Player2Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player3.png")));
 			Player3Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
+			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player4.png")));
 			Player4Button.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -6,7 +6,7 @@ public class Game {
 
 	}
 
-	Game() {
+	public Game() {
 		View v = new View();
 		v.home();
 		v.playerSelect();
