@@ -37,7 +37,7 @@ public class GameScreen extends JFrame{
 			
 	
 	//Constructor
-	public GameScreen() {
+	public GameScreen(ImageIcon playerImage) {
 		super();
 		
 		//Frame Setup
@@ -56,15 +56,7 @@ public class GameScreen extends JFrame{
 		//Player setup
 		playerX = currentZone.getPlayerStartX();
 		playerY = currentZone.getPlayerStartY();
-		
-		try {
-			playerPic = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
-			
-		}
-		catch(IOException e) {
-			System.out.println(e.getMessage());
-		}
-		
+		playerPic = playerImage;
 		//Enemy setup
 		enemyX = currentZone.getEnemyStartX();
 		enemyY = currentZone.getEnemyStartY();
@@ -148,53 +140,66 @@ public class GameScreen extends JFrame{
 	void tryMoveLeft() {
 		
 		if(playerX>0) {
-			currentZone.getSpace(playerY, playerX - 1).processInstructions();
-			if(currentZone.getSpace(playerY, playerX-1).getPassThrough()) {
+			int targetX = playerX -1;
+			int targetY = playerY;
+			
+			if(currentZone.getSpace(targetY, targetX).getPassThrough()) {
+				
 				playerX -=1;
 				//enemyMove();
 			}
+			currentZone.getSpace(targetY, targetX).processInstructions();
 			updateScreen();
 		}
-		System.out.println("hi");
+		
 	
 	}
 void tryMoveUp() {
 		
 		if(playerY>0) {
-			currentZone.getSpace(playerY - 1, playerX).processInstructions();
-			if(currentZone.getSpace(playerY-1, playerX).getPassThrough()) {
+			int targetX = playerX;
+			int targetY = playerY -1;
+			
+			if(currentZone.getSpace(targetY, targetX).getPassThrough()) {
+				
 				playerY -=1;
 				//enemyMove();
 			}
+			currentZone.getSpace(targetY, targetX).processInstructions();
 			updateScreen();
 		}
-		System.out.println("hi");
 	
 	}
 void tryMoveRight() {
 	
 	if(playerX< DIMENSIONS -1) {
-		currentZone.getSpace(playerY, playerX +1).processInstructions();
-		if(currentZone.getSpace(playerY, playerX+1).getPassThrough()) {
+		int targetX = playerX +1;
+		int targetY = playerY;
+		
+		if(currentZone.getSpace(targetY, targetX).getPassThrough()) {
+			
 			playerX +=1;
 			//enemyMove();
 		}
+		currentZone.getSpace(targetY, targetX).processInstructions();
 		updateScreen();
 	}
-	System.out.println("hi");
 
 }
 void tryMoveDown() {
 	
 	if(playerY < DIMENSIONS -1) {
-		currentZone.getSpace(playerY +1, playerX).processInstructions();
-		if(currentZone.getSpace(playerY +1, playerX).getPassThrough()) {
+		int targetX = playerX;
+		int targetY = playerY+1;
+		
+		if(currentZone.getSpace(targetY, targetX).getPassThrough()) {
+			
 			playerY +=1;
 			//enemyMove();
 		}
+		currentZone.getSpace(targetY, targetX).processInstructions();
 		updateScreen();
 	}
-	System.out.println("hi");
 
 }
 	

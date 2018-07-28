@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 import org.w3c.dom.css.RGBColor;
 
-public class View implements ActionListener{
+public class View implements ActionListener {
 	JButton startButton = new JButton();
 	JFrame homeFrame = new JFrame();
 	JButton Player1Button = new JButton();
@@ -22,7 +22,9 @@ public class View implements ActionListener{
 	JButton Player4Button = new JButton();
 	JFrame playerSelectFrame = new JFrame();
 	JPanel player = new JPanel();
-	GameScreen gameFrame = new GameScreen();
+	ImageIcon playerSelected;
+
+	// GameScreen gameFrame = new GameScreen();
 	void home() {
 		homeFrame.setSize(1000, 1000);
 		JPanel panel = new JPanel();
@@ -31,7 +33,7 @@ public class View implements ActionListener{
 		panel.setOpaque(true);
 		homeFrame.setVisible(true);
 		startButton.addActionListener(this);
-		//JButton button2 = new JButton();
+		// JButton button2 = new JButton();
 		panel.setLayout(null);
 		panel.add(startButton);
 		try {
@@ -41,16 +43,16 @@ public class View implements ActionListener{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		startButton.setBounds(275, 350, 450 ,150);
+		startButton.setBounds(275, 350, 450, 150);
 
 	}
 
 	void playerSelect() {
-		Font font = new Font(Font.DIALOG_INPUT,Font.CENTER_BASELINE, 80);
+		Font font = new Font(Font.DIALOG_INPUT, Font.CENTER_BASELINE, 80);
 		playerSelectFrame.setSize(1000, 1000);
 		JPanel panel = new JPanel();
 		playerSelectFrame.add(panel);
-		panel.setBackground(new Color(0,0,0));
+		panel.setBackground(new Color(0, 0, 0));
 		panel.setOpaque(true);
 		JLabel label = new JLabel("           Player Select                           \n");
 		label.setFont(font);
@@ -64,7 +66,6 @@ public class View implements ActionListener{
 		panel.add(Player2Button);
 		panel.add(Player3Button);
 		panel.add(Player4Button);
-		//if statement- set player to player select button
 		playerSelectFrame.setVisible(false);
 		try {
 			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
@@ -96,44 +97,53 @@ public class View implements ActionListener{
 		}
 	}
 
-	/*void gameScreen() {
-		gameFrame.setSize(1000, 1000);
-		JPanel panel = new JPanel();
-		gameFrame.add(panel);
-		panel.setBackground(Color.GREEN);
-		panel.setOpaque(true);
-		gameFrame.setVisible(false);
-		
-	}
-	*/
+	/*
+	 * void gameScreen() { gameFrame.setSize(1000, 1000); JPanel panel = new
+	 * JPanel(); gameFrame.add(panel); panel.setBackground(Color.GREEN);
+	 * panel.setOpaque(true); gameFrame.setVisible(false);
+	 * 
+	 * }
+	 */
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(startButton==e.getSource()) {
+		if (startButton == e.getSource()) {
 			playerSelectFrame.setVisible(true);
 			homeFrame.dispose();
 		}
-		if(Player1Button == e.getSource()) {
-		gameFrame.setVisible(true);
-		playerSelectFrame.dispose();
-		
-	}
-		if(Player2Button == e.getSource()) {
-			gameFrame.setVisible(true);
+		if (Player1Button == e.getSource()) {
+			playerSelected = (ImageIcon) Player1Button.getIcon();
 			playerSelectFrame.dispose();
-			
+			startGame();
+
 		}
-		if(Player3Button == e.getSource()) {
-			gameFrame.setVisible(true);
+		if (Player2Button == e.getSource()) {
+			playerSelected = (ImageIcon) Player2Button.getIcon();
 			playerSelectFrame.dispose();
-			
+			startGame();
+
 		}
-		if(Player4Button == e.getSource()) {
-			gameFrame.setVisible(true);
+		if (Player3Button == e.getSource()) {
+			playerSelected = (ImageIcon) Player3Button.getIcon();
 			playerSelectFrame.dispose();
-			
+			startGame();
+
+		}
+		if (Player4Button == e.getSource()) {
+			playerSelected = (ImageIcon) Player4Button.getIcon();
+			playerSelectFrame.dispose();
+			startGame();
+
 		}
 
-}
+	}
+
+	ImageIcon getPlayerSelected() {
+		return playerSelected;
+	}
+	void startGame() {
+		GameScreen game = new GameScreen(playerSelected);
+		
+	}
 }

@@ -10,6 +10,8 @@ public class Game {
 		View v = new View();
 		v.home();
 		v.playerSelect();
-		
+		/*GameScreen game = new GameScreen(v.getPlayerSelected());
+		game.updateScreen();
+		game.setVisible(true);*/
 	}
 }
