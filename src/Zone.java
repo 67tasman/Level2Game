@@ -23,6 +23,8 @@ public class Zone {
 	ImageIcon skulls;
 	ImageIcon rockmonster;
 	ImageIcon pillar;
+	ImageIcon button;
+	ImageIcon hole;
 	//Constructor
 	public Zone(int d) {
 		dimensions = d;
@@ -43,6 +45,9 @@ public class Zone {
 			skulls = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("skulls.png")));
 			rockmonster = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rockmonster.gif")));
 			pillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("pillar.png")));
+			button = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("button.png")));
+			hole = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("hole.png")));
+			
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());
