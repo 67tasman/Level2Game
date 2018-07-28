@@ -17,8 +17,12 @@ public class Zone {
 	ImageIcon player;
 	ImageIcon player2;
 	ImageIcon player3;
+	ImageIcon player4;
 	ImageIcon rock;
 	ImageIcon portal;
+	ImageIcon skulls;
+	ImageIcon rockmonster;
+	ImageIcon pillar;
 	//Constructor
 	public Zone(int d) {
 		dimensions = d;
@@ -32,8 +36,13 @@ public class Zone {
 		try {
 			player = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player.png")));
 			player2 = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player2.png")));
+			player3 = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player3.png")));
+			player4 = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("player4.png")));
 			rock = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rock.png"))); 
 			portal = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("portal.gif"))); 
+			skulls = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("skulls.png")));
+			rockmonster = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rockmonster.gif")));
+			pillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("pillar.png")));
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());
