@@ -25,6 +25,9 @@ public class Zone {
 	ImageIcon pillar;
 	ImageIcon button;
 	ImageIcon hole;
+	ImageIcon key;
+	ImageIcon lock;
+	ImageIcon arrow;
 	//Constructor
 	public Zone(int d) {
 		dimensions = d;
@@ -47,7 +50,9 @@ public class Zone {
 			pillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("pillar.png")));
 			button = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("button.png")));
 			hole = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("hole.png")));
-			
+			key = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("key.png")));
+			lock = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lock.png")));
+			arrow = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("arrow.png")));
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());
