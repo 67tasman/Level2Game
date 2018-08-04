@@ -53,8 +53,8 @@ public class Space {
 	return nextZone;
 	}
 	
-	public void addInstruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, int sta) {
-		Instruction temp = new Instruction(trig, tar, pic, c, pass, sta); 
+	public void addInstruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, int sta, boolean newL, int newY, int newX) {
+		Instruction temp = new Instruction(trig, tar, pic, c, pass, sta, newL, newY, newX); 
 			list.add(temp);
 	}
 	public void processInstructions() {
@@ -64,6 +64,15 @@ public class Space {
 				list.get(i).preformAction();
 			}
 		}
+	}
+	public int[] getNewLocation(){
+		int initialState= state;
+		for(int i=0 ; i< list.size() ; i++) {
+			if(initialState == list.get(i).getTrigger() && list.get(i).getIfNewLocation()) {
+				return list.get(i).getNewPlayerLocation();
+			}
+		}
+		return null;
 	}
 }
 

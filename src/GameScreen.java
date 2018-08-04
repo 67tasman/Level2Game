@@ -50,7 +50,7 @@ public class GameScreen extends JFrame{
 		setLayout(grid);
 		
 		//Zone Setup
-		currentZone = new Zone1(DIMENSIONS, 5,2,9,0);
+		currentZone = new Zone1(DIMENSIONS, 0,0,9,0);
 		currentZone.enableZoneWarpSpaces();
 		
 		//Player setup
@@ -148,6 +148,7 @@ public class GameScreen extends JFrame{
 				playerX -=1;
 				//enemyMove();
 			}
+			checkPlayerWarp(targetY, targetX);
 			currentZone.getSpace(targetY, targetX).processInstructions();
 			updateScreen();
 		}
@@ -165,6 +166,7 @@ void tryMoveUp() {
 				playerY -=1;
 				//enemyMove();
 			}
+			checkPlayerWarp(targetY, targetX);
 			currentZone.getSpace(targetY, targetX).processInstructions();
 			updateScreen();
 		}
@@ -181,6 +183,7 @@ void tryMoveRight() {
 			playerX +=1;
 			//enemyMove();
 		}
+		checkPlayerWarp(targetY, targetX);
 		currentZone.getSpace(targetY, targetX).processInstructions();
 		updateScreen();
 	}
@@ -197,10 +200,19 @@ void tryMoveDown() {
 			playerY +=1;
 			//enemyMove();
 		}
+		checkPlayerWarp(targetY, targetX);
 		currentZone.getSpace(targetY, targetX).processInstructions();
 		updateScreen();
 	}
 
+}
+public void checkPlayerWarp(int y, int x) {
+	Space currentSpace = currentZone.getSpace(y, x);
+	int[] newPlayerLocation = currentSpace.getNewLocation();
+	if(newPlayerLocation != null) {
+		playerY = newPlayerLocation[0];
+		playerX = newPlayerLocation[1];
+	}
 }
 	
 	

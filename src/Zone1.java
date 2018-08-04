@@ -19,9 +19,9 @@ Color color = new Color(79,69,66);
 		// Set up row 0
 		spaces[0][0] = new Space(null, color, true, 0);
 		spaces[0][1] = new Space(null, color, true, 0);
-		spaces[0][2] = new Space(hole, color, true, 0);
+		spaces[0][2] = new Space(null, color, true, 0);
 		spaces[0][3] = new Space(pillar, color, false, 0);
-		spaces[0][4] = new Space(hole, color, true, 0);
+		spaces[0][4] = new Space(null, color, true, 0);
 		spaces[0][5] = new Space(null, color, true, 0);
 		spaces[0][6] = new Space(pillar, color, false, 0);
 		spaces[0][7] = new Space(skulls, color, false, 0);
@@ -33,7 +33,7 @@ Color color = new Color(79,69,66);
 		spaces[1][1] = new Space(null, color, true, 0);
 		spaces[1][2] = new Space(rock, color, false, 0);
 		spaces[1][3] = new Space(pillar, color, false, 0);
-		spaces[1][4] = new Space(null, color, true, 0);
+		spaces[1][4] = new Space(hole, color, true, 0);
 		spaces[1][5] = new Space(null, color, true, 0);
 		spaces[1][6] = new Space(pillar, color, false, 0);
 		spaces[1][7] = new Space(rock, color, false, 0);
@@ -42,7 +42,7 @@ Color color = new Color(79,69,66);
 		// Set up row 2
 		spaces[2][0] = new Space(skulls, color, false, 0);
 		spaces[2][1] = new Space(skulls, color, false, 0);
-		spaces[2][2] = new Space(button, color, true, 0);
+		spaces[2][2] = new Space(null, color, true, 0);
 		spaces[2][3] = new Space(pillar, color, false, 0);
 		spaces[2][4] = new Space(null, color, true, 0);
 		spaces[2][5] = new Space(null, color, true, 0);
@@ -63,23 +63,23 @@ Color color = new Color(79,69,66);
 		spaces[3][9] = new Space(pillar, color, false, 0);
 		// Set up row 4
 		spaces[4][0] = new Space(null, color, true, 0);
-		spaces[4][1] = new Space(null, color, true, 0);
+		spaces[4][1] = new Space(rock, color, false, 0);
 		spaces[4][2] = new Space(null, color, true, 0);
 		spaces[4][3] = new Space(null, color, true, 0);
 		spaces[4][4] = new Space(null, color, true, 0);
 		spaces[4][5] = new Space(null, color, true, 0);
-		spaces[4][6] = new Space(null, color, true, 0);
-		spaces[4][7] = new Space(null, color, true, 0);
+		spaces[4][6] = new Space(pillar, color, false, 0);
+		spaces[4][7] = new Space(portal, color, true, 0);
 		spaces[4][8] = new Space(null, color, true, 0);
-		spaces[4][9] = new Space(null, color, true, 0);
+		spaces[4][9] = new Space(skulls, color, false, 0);
 		// Set up row 5
-		spaces[5][0] = new Space(portal, color, true, 0);
+		spaces[5][0] = new Space(rock, color, false, 0);
 		spaces[5][1] = new Space(null, color, true, 0);
 		spaces[5][2] = new Space(null, color, true, 0);
 		spaces[5][3] = new Space(null, color, true, 0);
 		spaces[5][4] = new Space(null, color, true, 0);
-		spaces[5][5] = new Space(null, color, true, 0);
-		spaces[5][6] = new Space(null, color, true, 0);
+		spaces[5][5] = new Space(portal, color, true, 0);
+		spaces[5][6] = new Space(pillar, color, false, 0);
 		spaces[5][7] = new Space(null, color, true, 0);
 		spaces[5][8] = new Space(null, color, true, 0);
 		spaces[5][9] = new Space(null, color, true, 0);
@@ -96,7 +96,7 @@ Color color = new Color(79,69,66);
 		spaces[6][9] = new Space(pillar, color, false, 0);
 		// Set up row 7
 		spaces[7][0] = new Space(null, color, true, 0);
-		spaces[7][1] = new Space(null, color, true, 0);
+		spaces[7][1] = new Space(skulls, color, false, 0);
 		spaces[7][2] = new Space(null, color, true, 0);
 		spaces[7][3] = new Space(pillar, color, false, 0);
 		spaces[7][4] = new Space(null, color, true, 0);
@@ -108,7 +108,7 @@ Color color = new Color(79,69,66);
 		// Set up row 8
 		spaces[8][0] = new Space(null, color, true, 0);
 		spaces[8][1] = new Space(null, color, true, 0);
-		spaces[8][2] = new Space(null, color, true, 0);
+		spaces[8][2] = new Space(skulls, color, false, 0);
 		spaces[8][3] = new Space(pillar, color, false, 0);
 		spaces[8][4] = new Space(null, color, true, 0);
 		spaces[8][5] = new Space(null, color, true, 0);
@@ -117,11 +117,11 @@ Color color = new Color(79,69,66);
 		spaces[8][8] = new Space(null, color, true, 0);
 		spaces[8][9] = new Space(portal, color, true, 0);
 		// Set up row 9
-		spaces[9][0] = new Space(null, color, true, 0);
+		spaces[9][0] = new Space(portal, color, true, 0);
 		spaces[9][1] = new Space(null, color, true, 0);
 		spaces[9][2] = new Space(null, color, true, 0);
 		spaces[9][3] = new Space(pillar, color, false, 0);
-		spaces[9][4] = new Space(null, color, true, 0);
+		spaces[9][4] = new Space(portal, color, true, 0);
 		spaces[9][5] = new Space(null, color, true, 0);
 		spaces[9][6] = new Space(pillar, color, false, 0);
 		spaces[9][7] = new Space(skulls, color, false, 0);
@@ -131,13 +131,13 @@ Color color = new Color(79,69,66);
 	//Special Instructions
 	
 	//Rock appears when portal is stepped on
-	spaces[7][8].addInstruction(0, spaces[4][5], rock , color, false, 0); //makes rock45 appear
-	spaces[7][8].addInstruction(0, spaces[7][8], portal , color, true, 1);//changes portal to state 1
-	spaces[7][8].addInstruction(1, spaces[4][5], null , color, true, 0);//rock45 dissapears
-	spaces[7][8].addInstruction(1, spaces[7][8], portal , color, true, 0);//portal state back to 0
+							//trigger, 	target,   		pic, 	color, passability, state, 	warp, 	newY, 	newX
+	spaces[2][1].addInstruction(0, 		spaces[2][1], 	button , color, true,     	1,    	false, 	0,   	0); //turns the skulls to button
+	spaces[2][1].addInstruction(0, 		spaces[2][2], 	skulls , color, false,     	0,    	false, 	0,   	0); //moves the skulls
+	spaces[2][1].addInstruction(1, 		spaces[1][2], 	hole , color, 	true,     	1,    	false, 	0,   	0);//button makes hole appear
+	spaces[2][1].addInstruction(1, 		spaces[0][2], 	rock , color, false,     	0,    	false, 	0,   	0); //and moves rock
+	spaces[1][2].addInstruction(1, 		spaces[1][2], 	hole , color, false,     	1,    	true, 	1,   	4); //hole moves player
 	
-	spaces[7][8].addInstruction(0, spaces[6][7], null , color, true, 0);//rock67 disapear
-	spaces[7][8].addInstruction(1, spaces[6][7], rock , color, false, 0);//rock67 reapears
 	}
 	
 }

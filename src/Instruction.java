@@ -11,17 +11,38 @@ public class Instruction {
 	Color newColor;
 	boolean newPassThrough;
 	int newState;
+	boolean newLocation;
+	int newPlayerX;
+	int newPlayerY;
 	
 	//Constructor
-	public Instruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, int sta) {
+	public Instruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, 
+			int sta, boolean newL, int newY, int newX) {
 		trigger = trig;
 		target = tar;
 		newPic = pic;
 		newColor = c;
 		newPassThrough = pass;
 		newState = sta;
+		newLocation = newL;
+		newPlayerX = newX;
+		newPlayerY = newY;
+		
 	}
 	
+	public boolean getIfNewLocation() {
+		return newLocation;
+	}
+	
+	public int[] getNewPlayerLocation() {
+		if (newLocation) {
+			int[] locationArray = new int[2];
+			locationArray[0]= newPlayerY;
+			locationArray[1] = newPlayerX;
+			return locationArray;	
+		}
+		else return null;
+	}
 	//Methods
 	public int getTrigger() {
 		return trigger;
