@@ -35,6 +35,11 @@ public class Zone {
 	
 	//SoundEffects
 	String keyPickup;
+	String push;
+	String buttonClick;
+	String lockClick;
+	String teleport;
+	
 	//Constructor
 	public Zone(int d) {
 		dimensions = d;
@@ -70,6 +75,10 @@ public class Zone {
 		
 		//Sound Effects
 		keyPickup = "Audio/keyPickup.wav";
+		push = "Audio/move.wav";
+		buttonClick = "Audio/button.wav";
+		lockClick = "Audio/lock.wav";
+		teleport = "Audio/teleport.wav";
 	}
 	
 	
