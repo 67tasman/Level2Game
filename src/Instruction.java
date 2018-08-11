@@ -14,10 +14,11 @@ public class Instruction {
 	boolean newLocation;
 	int newPlayerX;
 	int newPlayerY;
+	String sound;
 	
 	//Constructor
 	public Instruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, 
-			int sta, boolean newL, int newY, int newX) {
+			int sta, boolean newL, int newY, int newX, String snd) {
 		trigger = trig;
 		target = tar;
 		newPic = pic;
@@ -27,7 +28,7 @@ public class Instruction {
 		newLocation = newL;
 		newPlayerX = newX;
 		newPlayerY = newY;
-		
+		sound = snd;
 	}
 	
 	public boolean getIfNewLocation() {
@@ -52,5 +53,8 @@ public class Instruction {
 		target.setColor(newColor);
 		target.setPassThrough(newPassThrough);
 		target.setState(newState);
+	}
+	public String getSound() {
+		return sound;
 	}
 }

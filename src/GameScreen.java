@@ -15,7 +15,9 @@ public class GameScreen extends JFrame{
 	public final int WINDOW_WIDTH = 1000;
 	public final int DIMENSIONS = 10;
 	
-	
+	//Audio Player
+	AudioPlayer musicPlayer = new AudioPlayer();
+	AudioPlayer soundPlayer = new AudioPlayer();
 	//Player Attributes
 	private int playerX;
 	private int playerY;
@@ -102,18 +104,26 @@ public class GameScreen extends JFrame{
 		//Other
 		setVisible(true);
 		addKeyListener(new Movement(this)); 
+		//starting background music
+		musicPlayer.play(currentZone.getBackgroundMusic(), 100);
 	}
 	void updateScreen() {
 		
 		//Make Zone Change if necessary
 		Zone possibleNewZone = currentZone.getSpace(playerY, playerX).getNextZone();
 		if(possibleNewZone != null) {
+			String oldBGMusic = currentZone.getBackgroundMusic();
 			currentZone = possibleNewZone;
 			currentZone.enableZoneWarpSpaces();
 			playerX = currentZone.getPlayerStartX();
 			playerY = currentZone.getPlayerStartY();
 			enemyX = currentZone.getEnemyStartX();
 			enemyY = currentZone.getEnemyStartY();
+			
+			if(!oldBGMusic.equals(currentZone.getBackgroundMusic())) {
+				musicPlayer.stop();
+				musicPlayer.play(currentZone.getBackgroundMusic(), 100);
+			}
 		}
 		
 		//Update Panel Colors
@@ -149,8 +159,11 @@ public class GameScreen extends JFrame{
 				//enemyMove();
 			}
 			checkPlayerWarp(targetY, targetX);
-			currentZone.getSpace(targetY, targetX).processInstructions();
+			String sound = currentZone.getSpace(targetY, targetX).processInstructions();
 			updateScreen();
+			if(!sound.equals("")) {
+				soundPlayer.play(sound, 1);
+			}
 		}
 		
 	
@@ -167,8 +180,11 @@ void tryMoveUp() {
 				//enemyMove();
 			}
 			checkPlayerWarp(targetY, targetX);
-			currentZone.getSpace(targetY, targetX).processInstructions();
+			String sound = currentZone.getSpace(targetY, targetX).processInstructions();
 			updateScreen();
+			if(!sound.equals("")) {
+				soundPlayer.play(sound, 1);
+			}
 		}
 	
 	}
@@ -184,8 +200,11 @@ void tryMoveRight() {
 			//enemyMove();
 		}
 		checkPlayerWarp(targetY, targetX);
-		currentZone.getSpace(targetY, targetX).processInstructions();
+		String sound = currentZone.getSpace(targetY, targetX).processInstructions();
 		updateScreen();
+		if(!sound.equals("")) {
+			soundPlayer.play(sound, 1);
+		}
 	}
 
 }
@@ -201,8 +220,11 @@ void tryMoveDown() {
 			//enemyMove();
 		}
 		checkPlayerWarp(targetY, targetX);
-		currentZone.getSpace(targetY, targetX).processInstructions();
+		String sound = currentZone.getSpace(targetY, targetX).processInstructions();
 		updateScreen();
+		if(!sound.equals("")) {
+			soundPlayer.play(sound, 1);
+		}
 	}
 
 }

@@ -12,6 +12,7 @@ public class Zone {
 	int playerStartY;
 	int enemyStartX;
 	int enemyStartY;
+	String backgroundMusic;
 	
 	//Images
 	ImageIcon player;
@@ -28,6 +29,12 @@ public class Zone {
 	ImageIcon key;
 	ImageIcon lock;
 	ImageIcon arrow;
+	
+	//Music
+	String zone1Music;
+	
+	//SoundEffects
+	String keyPickup;
 	//Constructor
 	public Zone(int d) {
 		dimensions = d;
@@ -57,7 +64,14 @@ public class Zone {
 		catch(IOException e) {
 			System.out.println(e.getMessage());
 		}
+		//Designated path for audio variables
+		//Music
+		zone1Music = "Audio/dungeon.wav";
+		
+		//Sound Effects
+		keyPickup = "Audio/keyPickup.wav";
 	}
+	
 	
 	//Methods
 	
@@ -102,7 +116,10 @@ public class Zone {
 	public Space[][] getSpaceGrid(){
 		return spaces;
 	}
-	
+	//Background Music
+	public String getBackgroundMusic() {
+		return backgroundMusic;
+	}
 	//This method is defined in child classes.
 	public void enableZoneWarpSpaces() {
 		

@@ -53,17 +53,22 @@ public class Space {
 	return nextZone;
 	}
 	
-	public void addInstruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, int sta, boolean newL, int newY, int newX) {
-		Instruction temp = new Instruction(trig, tar, pic, c, pass, sta, newL, newY, newX); 
+	public void addInstruction(int trig, Space tar, ImageIcon pic, Color c, boolean pass, int sta, boolean newL, int newY, int newX, String snd) {
+		Instruction temp = new Instruction(trig, tar, pic, c, pass, sta, newL, newY, newX, snd); 
 			list.add(temp);
 	}
-	public void processInstructions() {
+	public String processInstructions() {
 		int initialState = state;
+		String soundToPlay = "";
 		for(int i = 0; i < list.size() ; i++) {
 			if(initialState == list.get(i).getTrigger()) {
 				list.get(i).preformAction();
+				if(list.get(i).getSound()!= null) {
+					soundToPlay = list.get(i).getSound();
+				}
 			}
 		}
+		return soundToPlay;
 	}
 	public int[] getNewLocation(){
 		int initialState= state;

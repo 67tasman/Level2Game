@@ -7,9 +7,12 @@
 /View.class
 /Zone.class
 /Zone1.class
+/arrow.png
 /button.png
 /floor.jpg
 /hole.png
+/key.png
+/lock.png
 /pillar.png
 /pillar2.png
 /player.png
@@ -21,6 +24,8 @@
 /rockmonster.gif
 /skulls.png
 /start.png
-/key.png
-/lock.png
-/arrow.png
+/Zone2.class
+/AudioPlayer.class
+/looperman-l-2431466-0134911-emotional-dark-pad.wav
+/dungeon.wav
+/keyPickup.wav
