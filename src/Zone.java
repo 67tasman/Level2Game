@@ -24,7 +24,8 @@ public class Zone {
 	ImageIcon skulls;
 	ImageIcon rockmonster;
 	ImageIcon pillar;
-	ImageIcon button;
+	ImageIcon lever;
+	ImageIcon leverOn;
 	ImageIcon hole;
 	ImageIcon key;
 	ImageIcon lock;
@@ -36,7 +37,7 @@ public class Zone {
 	//SoundEffects
 	String keyPickup;
 	String push;
-	String buttonClick;
+	String leverClick;
 	String lockClick;
 	String teleport;
 	
@@ -60,11 +61,12 @@ public class Zone {
 			skulls = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("skulls.png")));
 			rockmonster = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rockmonster.gif")));
 			pillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("pillar.png")));
-			button = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("button.png")));
+			lever = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lever 2.png")));
 			hole = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("hole.png")));
 			key = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("key.png")));
 			lock = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lock.png")));
 			arrow = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("arrow.png")));
+			leverOn = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lever.png")));
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());
@@ -76,7 +78,7 @@ public class Zone {
 		//Sound Effects
 		keyPickup = "Audio/keyPickup.wav";
 		push = "Audio/move.wav";
-		buttonClick = "Audio/button.wav";
+		leverClick = "Audio/lever.wav";
 		lockClick = "Audio/lock.wav";
 		teleport = "Audio/teleport.wav";
 	}
