@@ -30,6 +30,13 @@ public class Zone {
 	ImageIcon key;
 	ImageIcon lock;
 	ImageIcon arrow;
+	ImageIcon plant;
+	ImageIcon lightPillar;
+	ImageIcon TLfountain;
+	ImageIcon TRfountain;
+	ImageIcon BLfountain;
+	ImageIcon BRfountain;
+	ImageIcon test;
 	
 	//Music
 	String zone1Music;
@@ -67,6 +74,13 @@ public class Zone {
 			lock = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lock.png")));
 			arrow = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("arrow.png")));
 			leverOn = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lever.png")));
+			plant = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("plant.png")));
+			lightPillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lightpillar.png")));
+			TLfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("topleftfountain.png")));
+			TRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("toprightfountain.png")));
+			BLfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomleftfountain.png")));
+			BRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomrightfountain.png")));
+			test = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rojos.png")));
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());

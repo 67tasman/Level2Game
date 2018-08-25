@@ -2,7 +2,7 @@ import java.awt.Color;
 
 public class Zone1 extends Zone {
 	// Attributes
-Color color = new Color(122,102,100);
+Color color = new Color(100,81,71);
 	// Constructors
 	public Zone1(int dimensions, int pY, int pX, int eY, int eX) {
 		super(dimensions);
@@ -21,7 +21,7 @@ Color color = new Color(122,102,100);
 
 		//                      object  color  passable? state
 		// Set up row 0
-		spaces[0][0] = new Space(null, color, true, 0);
+		spaces[0][0] = new Space(test, color, true, 0);
 		spaces[0][1] = new Space(null, color, true, 0);
 		spaces[0][2] = new Space(null, color, true, 0);
 		spaces[0][3] = new Space(pillar, color, false, 0);
@@ -33,7 +33,7 @@ Color color = new Color(122,102,100);
 		spaces[0][9] = new Space(key, color, false, 0);
 
 		// Set up row 1
-		spaces[1][0] = new Space(null, color, true, 0);
+		spaces[1][0] = new Space(test, color, true, 0);
 		spaces[1][1] = new Space(null, color, true, 0);
 		spaces[1][2] = new Space(rock, color, false, 0);
 		spaces[1][3] = new Space(pillar, color, false, 0);
@@ -157,6 +157,8 @@ Color color = new Color(122,102,100);
 	spaces[4][1].addInstruction(0, 		spaces[4][1], 	lever , color, true,     	1,    	false, 	0,   	0,		null);//lever appears
 	spaces[4][1].addInstruction(1, 		spaces[7][0], 	skulls , color, false,     	1,    	false, 	0,   	0,		leverClick);//moves rock and
 	spaces[4][1].addInstruction(1, 		spaces[7][1], 	null , color, true,     	1,    	false, 	0,   	0,		null);//blank space
+	spaces[4][1].addInstruction(0, 		spaces[4][1], 	leverOn , color, false,     1,    	false, 	0,   	0,		leverClick);//leverOn image
+	spaces[4][1].addInstruction(1, 		spaces[4][1], 	lever , color, false,     	0,    	false, 	0,   	0,		leverClick);//back to lever 
 	spaces[8][9].addInstruction(0, 		spaces[8][9], 	portal , color, true,     	0,    	true, 	9,   	0,		teleport);//portal 8 teleports to portal 9
 	spaces[9][0].addInstruction(0, 		spaces[9][0], 	portal , color, true,     	0,    	true, 	8,   	9,		teleport);//portal 9 teleports to portal 8
 	spaces[7][2].addInstruction(1, 		spaces[7][2], 	portal , color, true,     	1,    	true, 	2,   	7,		teleport);//portal 10 teleports to portal 11

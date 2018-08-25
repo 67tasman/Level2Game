@@ -19,8 +19,8 @@ Color color = new Color(222,233,244);
 		backgroundMusic = zone1Music;
 		//                      object  color  passable? state
 		// Set up row 0
-		spaces[0][0] = new Space(null, color, true, 0);
-		spaces[0][1] = new Space(null, color, true, 0);
+		spaces[0][0] = new Space(test, color, true, 0);
+		spaces[0][1] = new Space(test, color, true, 0);
 		spaces[0][2] = new Space(null, color, true, 0);
 		spaces[0][3] = new Space(null, color, true, 0);
 		spaces[0][4] = new Space(null, color, true, 0);
@@ -31,8 +31,8 @@ Color color = new Color(222,233,244);
 		spaces[0][9] = new Space(null, color, true, 0);
 
 		// Set up row 1
-		spaces[1][0] = new Space(null, color, true, 0);
-		spaces[1][1] = new Space(null, color, true, 0);
+		spaces[1][0] = new Space(test, color, true, 0);
+		spaces[1][1] = new Space(test, color, true, 0);
 		spaces[1][2] = new Space(null, color, true, 0);
 		spaces[1][3] = new Space(null, color, true, 0);
 		spaces[1][4] = new Space(null, color, true, 0);
@@ -75,46 +75,46 @@ Color color = new Color(222,233,244);
 		spaces[4][8] = new Space(null, color, true, 0);
 		spaces[4][9] = new Space(null, color, true, 0);
 		// Set up row 5
-		spaces[5][0] = new Space(null, color, true, 0);
-		spaces[5][1] = new Space(null, color, true, 0);
-		spaces[5][2] = new Space(null, color, true, 0);
-		spaces[5][3] = new Space(pillar, color, false, 0);
+		spaces[5][0] = new Space(plant, color, true, 0);
+		spaces[5][1] = new Space(plant, color, true, 0);
+		spaces[5][2] = new Space(plant, color, true, 0); //bush
+		spaces[5][3] = new Space(lightPillar, color, false, 0);
 		spaces[5][4] = new Space(null, Color.red, true, 0);
 		spaces[5][5] = new Space(null, Color.red, true, 0);
-		spaces[5][6] = new Space(pillar, color, false, 0);
-		spaces[5][7] = new Space(null, color, true, 0);
-		spaces[5][8] = new Space(null, color, true, 0);
-		spaces[5][9] = new Space(null, color, true, 0);
+		spaces[5][6] = new Space(lightPillar, color, false, 0);
+		spaces[5][7] = new Space(plant, color, true, 0);
+		spaces[5][8] = new Space(plant, color, true, 0);
+		spaces[5][9] = new Space(plant, color, true, 0);
 		// Set up row 6
 		spaces[6][0] = new Space(null, color, true, 0);
 		spaces[6][1] = new Space(null, color, true, 0);
 		spaces[6][2] = new Space(null, color, true, 0);
-		spaces[6][3] = new Space(pillar, color, false, 0);
+		spaces[6][3] = new Space(lightPillar, color, false, 0);
 		spaces[6][4] = new Space(null, Color.red, true, 0);
 		spaces[6][5] = new Space(null, Color.red, true, 0);
-		spaces[6][6] = new Space(pillar, color, false, 0);
+		spaces[6][6] = new Space(lightPillar, color, false, 0);
 		spaces[6][7] = new Space(null, color, true, 0);
 		spaces[6][8] = new Space(null, color, true, 0);
 		spaces[6][9] = new Space(null, color, true, 0);
 		// Set up row 7
-		spaces[7][0] = new Space(null, color, true, 0);
-		spaces[7][1] = new Space(null, color, true, 0);
+		spaces[7][0] = new Space(TLfountain, color, true, 0);
+		spaces[7][1] = new Space(TRfountain, color, true, 0);
 		spaces[7][2] = new Space(null, color, true, 0);
-		spaces[7][3] = new Space(pillar, color, false, 0);
+		spaces[7][3] = new Space(lightPillar, color, false, 0);
 		spaces[7][4] = new Space(null, Color.red, true, 0);
 		spaces[7][5] = new Space(null, Color.red, true, 0);
-		spaces[7][6] = new Space(pillar, color, false, 0);
+		spaces[7][6] = new Space(lightPillar, color, false, 0);
 		spaces[7][7] = new Space(null, color, true, 0);
 		spaces[7][8] = new Space(null, color, true, 0);
 		spaces[7][9] = new Space(null, color, true, 0);
 		// Set up row 8
-		spaces[8][0] = new Space(null, color, true, 0);
-		spaces[8][1] = new Space(null, color, true, 0);
+		spaces[8][0] = new Space(BLfountain, color, true, 0);
+		spaces[8][1] = new Space(BRfountain, color, true, 0);
 		spaces[8][2] = new Space(null, color, true, 0);
-		spaces[8][3] = new Space(pillar, color, false, 0);
+		spaces[8][3] = new Space(lightPillar, color, false, 0);
 		spaces[8][4] = new Space(null, Color.red, true, 0);
 		spaces[8][5] = new Space(null, Color.red, true, 0);
-		spaces[8][6] = new Space(pillar, color, false, 0);
+		spaces[8][6] = new Space(lightPillar, color, false, 0);
 		spaces[8][7] = new Space(null, color, true, 0);
 		spaces[8][8] = new Space(null, color, true, 0);
 		spaces[8][9] = new Space(null, color, true, 0);
@@ -122,17 +122,16 @@ Color color = new Color(222,233,244);
 		spaces[9][0] = new Space(null, color, true, 0);
 		spaces[9][1] = new Space(null, color, true, 0);
 		spaces[9][2] = new Space(null, color, true, 0);
-		spaces[9][3] = new Space(pillar, color, false, 0);
+		spaces[9][3] = new Space(lightPillar, color, false, 0);
 		spaces[9][4] = new Space(null, Color.red, true, 0);
 		spaces[9][5] = new Space(null, Color.red, true, 0);
-		spaces[9][6] = new Space(pillar, color, false, 0);
+		spaces[9][6] = new Space(lightPillar, color, false, 0);
 		spaces[9][7] = new Space(null, color, true, 0);
 		spaces[9][8] = new Space(null, color, true, 0);
 		spaces[9][9] = new Space(null, color, true, 0);
 	
 	//Special Instructions
 	
-	//Rock appears when portal is stepped on
 							//trigger, 	target,   		pic, 	color, passability, state, 	warp, 	newY, 	newX
 	
 	}
