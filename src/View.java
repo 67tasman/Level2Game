@@ -4,8 +4,6 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -14,8 +12,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-import org.w3c.dom.css.RGBColor;
 
 public class View implements ActionListener {
 	JButton startButton = new JButton();
@@ -27,37 +23,50 @@ public class View implements ActionListener {
 	JFrame playerSelectFrame = new JFrame();
 	JPanel player = new JPanel();
 	ImageIcon playerSelected;
+	Color color = new Color(255, 255, 0);
+	Color color2 = new Color(255, 225, 0);
 
 	// GameScreen gameFrame = new GameScreen();
 	void home() {
+		Font font = new Font("SansSerif", Font.PLAIN, 18);
+		Font font2 = new Font("SansSerif", Font.PLAIN, 20);
 		homeFrame.setSize(1000, 1000);
 		homeFrame.setLayout(new BorderLayout());
 		JPanel panel = new JPanel();
 		JLabel buttonLabel = new JLabel();
 		JLabel label1 = new JLabel();
 		JLabel label2 = new JLabel();
-		JLabel sideLabel = new JLabel(new ImageIcon("sparkles.png"));
-		JLabel title = new JLabel("<html><span style='font-size:20px'>"+"Fun Game"+ "</span></html>");
+		JLabel sideLabel = new JLabel(new ImageIcon("player2.png"));
+		JLabel title = new JLabel();
 		JPanel panel1 = new JPanel();
 		JPanel sidePanel = new JPanel();
 		JPanel titlePanel = new JPanel();
 		label1.setText("Use the arrow keys or W,A,S,D to move.");
 		label2.setText("Escape the Castle");
-		//title.setText("Fun Game");
-		//sideLabel.add(new ImageIcon("sparkles.png"));
-		//panel.setBackground(Color.ORANGE);
-		//panel.setOpaque(true);
-		//panel.add(startButton);
+		label1.setForeground(Color.WHITE);
+		label2.setForeground(Color.WHITE);
+		label1.setFont(font);
+		label2.setFont(font);
+		title.setText("Fun Game");
+		title.setFont(font2);
+		// title.setText("Fun Game");
+		// sideLabel.add(new ImageIcon("sparkles.png"));
+		// panel.setBackground(Color.ORANGE);
+		// panel.setOpaque(true);
+		// panel.add(startButton);
 		homeFrame.setVisible(true);
 		startButton.addActionListener(this);
-		startButton.setBackground(Color.YELLOW);
+		startButton.setBackground(color);
 		startButton.setOpaque(true);
 		startButton.setBorderPainted(false);
-		panel1.setLayout(new GridLayout(2,1));
+		panel1.setLayout(new GridLayout(2, 1));
 		panel1.add(label1);
 		panel1.add(label2);
+		panel1.setBackground(Color.BLACK);
 		sidePanel.add(sideLabel);
+		sidePanel.setBackground(Color.BLACK);
 		titlePanel.add(title);
+		titlePanel.setBackground(color);
 		homeFrame.add(startButton, BorderLayout.SOUTH);
 		homeFrame.add(panel1, BorderLayout.CENTER);
 		homeFrame.add(titlePanel, BorderLayout.NORTH);
@@ -65,12 +74,11 @@ public class View implements ActionListener {
 		homeFrame.add(sidePanel, BorderLayout.WEST);
 		try {
 			ImageIcon icon = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("start.png")));
-		startButton.setIcon(icon);
+			startButton.setIcon(icon);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 
 	}
 
@@ -83,7 +91,7 @@ public class View implements ActionListener {
 		panel.setOpaque(true);
 		JLabel label = new JLabel("           Player Select                           \n");
 		label.setFont(font);
-		label.setForeground(Color.ORANGE);
+		label.setForeground(color2);
 		panel.add(label);
 		Player1Button.addActionListener(this);
 		Player2Button.addActionListener(this);
@@ -169,8 +177,9 @@ public class View implements ActionListener {
 	ImageIcon getPlayerSelected() {
 		return playerSelected;
 	}
+
 	void startGame() {
 		GameScreen game = new GameScreen(playerSelected);
-		
+
 	}
 }

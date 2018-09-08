@@ -76,10 +76,10 @@ public class Zone {
 			leverOn = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lever.png")));
 			plant = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("plant.png")));
 			lightPillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lightpillar.png")));
-			TLfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("topleftfountain.png")));
-			TRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("toprightfountain.png")));
-			BLfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomleftfountain.png")));
-			BRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomrightfountain.png")));
+			TLfountain = new StretchIcon(ImageIO.read(this.getClass().getResourceAsStream("topleftfountain.png")));
+			TRfountain = new StretchIcon(ImageIO.read(this.getClass().getResourceAsStream("toprightfountain.png")));
+			BLfountain = new StretchIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomleftfountain.png")));
+			BRfountain = new StretchIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomrightfountain.png")));
 			test = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rojos.png")));
 		}
 		catch(IOException e) {
