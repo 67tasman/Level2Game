@@ -82,6 +82,7 @@ public class Zone {
 			BRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomrightfountain.png")));
 			lightPillar = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("lightpillar.png")));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 			TLfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("topleftfountain.png")));
 			TRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("toprightfountain.png")));
@@ -99,11 +100,16 @@ public class Zone {
 		}
 		*/
 =======
+=======
+>>>>>>> 68e87be4e8d4f8c8ac3b570835eb977acc44ad9f
 			theEnd = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("theend.png")));
 
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
+<<<<<<< HEAD
+>>>>>>> 68e87be4e8d4f8c8ac3b570835eb977acc44ad9f
+=======
 >>>>>>> 68e87be4e8d4f8c8ac3b570835eb977acc44ad9f
 		// Designated path for audio variables
 		// Music
