@@ -6,10 +6,12 @@
 /Movement.class
 /Rojos.png
 /Space.class
+/StretchIcon.class
 /View.class
 /Zone.class
 /Zone1.class
 /Zone2.class
+/Zone3.class
 /arrow.png
 /bottomleftfountain.png
 /bottomrightfountain.png
@@ -41,6 +43,14 @@
 /sparkles.png
 /start.png
 /teleport.wav
+/theend.png
 /topleftfountain.png
 /toprightfountain.png
-/StretchIcon.class
+<<<<<<< HEAD
+=======
+/Zone3.class
+/theend.png
+/theend copy.png
+/theend2.png
+/theend3.png
+>>>>>>> 68e87be4e8d4f8c8ac3b570835eb977acc44ad9f

@@ -1,11 +1,12 @@
+
 import java.awt.Color;
 
-public class Zone2 extends Zone {
+public class Zone3 extends Zone {
 	// Attributes
 	Color color = new Color(242, 246, 255);
 
 	// Constructors
-	public Zone2(int dimensions, int pY, int pX, int eY, int eX) {
+	public Zone3(int dimensions, int pY, int pX, int eY, int eX) {
 		super(dimensions);
 
 		// player start
@@ -69,53 +70,53 @@ public class Zone2 extends Zone {
 		spaces[4][1] = new Space(null, color, true, 0);
 		spaces[4][2] = new Space(null, color, true, 0);
 		spaces[4][3] = new Space(null, color, true, 0);
-		spaces[4][4] = new Space(null, color, true, 0);
+		spaces[4][4] = new Space(theEnd, color, true, 0);
 		spaces[4][5] = new Space(null, color, true, 0);
 		spaces[4][6] = new Space(null, color, true, 0);
 		spaces[4][7] = new Space(null, color, true, 0);
 		spaces[4][8] = new Space(null, color, true, 0);
 		spaces[4][9] = new Space(null, color, true, 0);
 		// Set up row 5
-		spaces[5][0] = new Space(plant, color, false, 0);
-		spaces[5][1] = new Space(plant, color, false, 0);
-		spaces[5][2] = new Space(plant, color, false, 0); // bush
-		spaces[5][3] = new Space(lightPillar, color, false, 0);
-		spaces[5][4] = new Space(null, Color.red, true, 0);
-		spaces[5][5] = new Space(null, Color.red, true, 0);
-		spaces[5][6] = new Space(lightPillar, color, false, 0);
-		spaces[5][7] = new Space(plant, color, false, 0);
-		spaces[5][8] = new Space(plant, color, false, 0);
-		spaces[5][9] = new Space(plant, color, false, 0);
+		spaces[5][0] = new Space(null, color, true, 0);
+		spaces[5][1] = new Space(null, color, true, 0);
+		spaces[5][2] = new Space(null, color, true, 0);
+		spaces[5][3] = new Space(null, color, true, 0);
+		spaces[5][4] = new Space(null, color, true, 0);
+		spaces[5][5] = new Space(null, color, true, 0);
+		spaces[5][6] = new Space(null, color, true, 0);
+		spaces[5][7] = new Space(null, color, true, 0);
+		spaces[5][8] = new Space(null, color, true, 0);
+		spaces[5][9] = new Space(null, color, true, 0);
 		// Set up row 6
 		spaces[6][0] = new Space(null, color, true, 0);
-		spaces[6][1] = new Space(TLfountain, color, false, 0);
-		spaces[6][2] = new Space(TRfountain, color, false, 0);
-		spaces[6][3] = new Space(lightPillar, color, false, 0);
-		spaces[6][4] = new Space(null, Color.red, true, 0);
-		spaces[6][5] = new Space(null, Color.red, true, 0);
-		spaces[6][6] = new Space(lightPillar, color, false, 0);
-		spaces[6][7] = new Space(TLfountain, color, false, 0);
-		spaces[6][8] = new Space(TRfountain, color, false, 0);
+		spaces[6][1] = new Space(null, color, true, 0);
+		spaces[6][2] = new Space(null, color, true, 0);
+		spaces[6][3] = new Space(null, color, true, 0);
+		spaces[6][4] = new Space(null, color, true, 0);
+		spaces[6][5] = new Space(null, color, true, 0);
+		spaces[6][6] = new Space(null, color, true, 0);
+		spaces[6][7] = new Space(null, color, true, 0);
+		spaces[6][8] = new Space(null, color, true, 0);
 		spaces[6][9] = new Space(null, color, true, 0);
 		// Set up row 7
 		spaces[7][0] = new Space(null, color, true, 0);
-		spaces[7][1] = new Space(BLfountain, color, false, 0);
-		spaces[7][2] = new Space(BRfountain, color, false, 0);
-		spaces[7][3] = new Space(lightPillar, color, false, 0);
-		spaces[7][4] = new Space(null, Color.red, true, 0);
-		spaces[7][5] = new Space(null, Color.red, true, 0);
-		spaces[7][6] = new Space(lightPillar, color, false, 0);
-		spaces[7][7] = new Space(BLfountain, color, false, 0);
-		spaces[7][8] = new Space(BRfountain, color, false, 0);
+		spaces[7][1] = new Space(null, color, true, 0);
+		spaces[7][2] = new Space(null, color, true, 0);
+		spaces[7][3] = new Space(null, color, true, 0);
+		spaces[7][4] = new Space(null, color, true, 0);
+		spaces[7][5] = new Space(null, color, true, 0);
+		spaces[7][6] = new Space(null, color, true, 0);
+		spaces[7][7] = new Space(null, color, true, 0);
+		spaces[7][8] = new Space(null, color, true, 0);
 		spaces[7][9] = new Space(null, color, true, 0);
 		// Set up row 8
 		spaces[8][0] = new Space(null, color, true, 0);
 		spaces[8][1] = new Space(null, color, true, 0);
 		spaces[8][2] = new Space(null, color, true, 0);
-		spaces[8][3] = new Space(lightPillar, color, false, 0);
-		spaces[8][4] = new Space(null, Color.red, true, 0);
-		spaces[8][5] = new Space(null, Color.red, true, 0);
-		spaces[8][6] = new Space(lightPillar, color, false, 0);
+		spaces[8][3] = new Space(null, color, true, 0);
+		spaces[8][4] = new Space(null, color, true, 0);
+		spaces[8][5] = new Space(null, color, true, 0);
+		spaces[8][6] = new Space(null, color, true, 0);
 		spaces[8][7] = new Space(null, color, true, 0);
 		spaces[8][8] = new Space(null, color, true, 0);
 		spaces[8][9] = new Space(null, color, true, 0);
@@ -123,10 +124,10 @@ public class Zone2 extends Zone {
 		spaces[9][0] = new Space(null, color, true, 0);
 		spaces[9][1] = new Space(null, color, true, 0);
 		spaces[9][2] = new Space(null, color, true, 0);
-		spaces[9][3] = new Space(lightPillar, color, false, 0);
-		spaces[9][4] = new Space(null, Color.red, true, 0);
-		spaces[9][5] = new Space(null, Color.red, true, 0);
-		spaces[9][6] = new Space(lightPillar, color, false, 0);
+		spaces[9][3] = new Space(null, color, true, 0);
+		spaces[9][4] = new Space(null, color, true, 0);
+		spaces[9][5] = new Space(null, color, true, 0);
+		spaces[9][6] = new Space(null, color, true, 0);
 		spaces[9][7] = new Space(null, color, true, 0);
 		spaces[9][8] = new Space(null, color, true, 0);
 		spaces[9][9] = new Space(null, color, true, 0);
@@ -140,7 +141,6 @@ public class Zone2 extends Zone {
 	// Methods
 	public void enableZoneWarpSpaces() {
 		// Sets up warp spaces to new zones
-		spaces[9][4].setNextZone(new Zone3(dimensions, 0, 0, 0, 0));
-		// spaces[9][5].setNextZone(new Zone3(dimensions, 0, 0, 0, 0));
+		// spaces[9][4].setNextZone(new Zone2(dimensions, 0, 0, 0, 0));
 	}
 }

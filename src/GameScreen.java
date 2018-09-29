@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.io.IOException;
 
@@ -6,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 public class GameScreen extends JFrame {
 
@@ -80,6 +82,8 @@ public class GameScreen extends JFrame {
 		for (int i = 0; i < 10; i++) {
 			for (int a = 0; a < 10; a++) {
 				labels[i][a] = new JLabel();
+
+				labels[i][a].setBorder(new LineBorder(Color.BLUE, 0));
 				panels[i][a].add(labels[i][a]);
 
 			}
