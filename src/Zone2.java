@@ -76,37 +76,37 @@ public class Zone2 extends Zone {
 		spaces[4][8] = new Space(null, color, true, 0);
 		spaces[4][9] = new Space(null, color, true, 0);
 		// Set up row 5
-		spaces[5][0] = new Space(plant, color, false, 0);
-		spaces[5][1] = new Space(plant, color, false, 0);
-		spaces[5][2] = new Space(plant, color, false, 0); // bush
+		spaces[5][0] = new Space(plant, color, true, 0);
+		spaces[5][1] = new Space(plant, color, true, 0);
+		spaces[5][2] = new Space(plant, color, true, 0); // bush
 		spaces[5][3] = new Space(lightPillar, color, false, 0);
 		spaces[5][4] = new Space(null, Color.red, true, 0);
 		spaces[5][5] = new Space(null, Color.red, true, 0);
 		spaces[5][6] = new Space(lightPillar, color, false, 0);
-		spaces[5][7] = new Space(plant, color, false, 0);
-		spaces[5][8] = new Space(plant, color, false, 0);
-		spaces[5][9] = new Space(plant, color, false, 0);
+		spaces[5][7] = new Space(plant, color, true, 0);
+		spaces[5][8] = new Space(plant, color, true, 0);
+		spaces[5][9] = new Space(plant, color, true, 0);
 		// Set up row 6
 		spaces[6][0] = new Space(null, color, true, 0);
-		spaces[6][1] = new Space(TLfountain, color, false, 0);
-		spaces[6][2] = new Space(TRfountain, color, false, 0);
+		spaces[6][1] = new Space(TLfountain, color, true, 0);
+		spaces[6][2] = new Space(TRfountain, color, true, 0);
 		spaces[6][3] = new Space(lightPillar, color, false, 0);
 		spaces[6][4] = new Space(null, Color.red, true, 0);
 		spaces[6][5] = new Space(null, Color.red, true, 0);
 		spaces[6][6] = new Space(lightPillar, color, false, 0);
-		spaces[6][7] = new Space(TLfountain, color, false, 0);
-		spaces[6][8] = new Space(TRfountain, color, false, 0);
+		spaces[6][7] = new Space(TLfountain, color, true, 0);
+		spaces[6][8] = new Space(TRfountain, color, true, 0);
 		spaces[6][9] = new Space(null, color, true, 0);
 		// Set up row 7
 		spaces[7][0] = new Space(null, color, true, 0);
-		spaces[7][1] = new Space(BLfountain, color, false, 0);
-		spaces[7][2] = new Space(BRfountain, color, false, 0);
+		spaces[7][1] = new Space(BLfountain, color, true, 0);
+		spaces[7][2] = new Space(BRfountain, color, true, 0);
 		spaces[7][3] = new Space(lightPillar, color, false, 0);
 		spaces[7][4] = new Space(null, Color.red, true, 0);
 		spaces[7][5] = new Space(null, Color.red, true, 0);
 		spaces[7][6] = new Space(lightPillar, color, false, 0);
-		spaces[7][7] = new Space(BLfountain, color, false, 0);
-		spaces[7][8] = new Space(BRfountain, color, false, 0);
+		spaces[7][7] = new Space(BLfountain, color, true, 0);
+		spaces[7][8] = new Space(BRfountain, color, true, 0);
 		spaces[7][9] = new Space(null, color, true, 0);
 		// Set up row 8
 		spaces[8][0] = new Space(null, color, true, 0);
@@ -140,7 +140,7 @@ public class Zone2 extends Zone {
 	// Methods
 	public void enableZoneWarpSpaces() {
 		// Sets up warp spaces to new zones
-		spaces[9][4].setNextZone(new Zone3(dimensions, 0, 0, 0, 0));
-		// spaces[9][5].setNextZone(new Zone3(dimensions, 0, 0, 0, 0));
+		//
+		// spaces[4][9].setNextZone(new Zone2(dimensions, 0, 0);
 	}
 }

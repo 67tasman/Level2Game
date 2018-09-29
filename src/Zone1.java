@@ -135,7 +135,7 @@ public class Zone1 extends Zone {
 		// Special Instructions
 
 		// Rock appears when portal is stepped on
-		//
+		// trigger, target, pic, color, passability, state, warp, newY, newX, Sound
 		spaces[2][1].addInstruction(0, spaces[2][1], lever, color, false, 1, false, 0, 0, push); // turns the skulls to
 																									// lever
 		spaces[2][1].addInstruction(0, spaces[2][2], skulls, color, false, 0, false, 0, 0, null); // moves the skulls
