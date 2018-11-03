@@ -169,7 +169,7 @@ public class Zone1 extends Zone {
 		spaces[4][1].addInstruction(0, spaces[4][1], lever, color, true, 1, false, 0, 0, null);// lever appears
 		spaces[4][1].addInstruction(1, spaces[7][0], skulls, color, false, 1, false, 0, 0, leverClick);// moves rock and
 		spaces[4][1].addInstruction(1, spaces[7][1], null, color, true, 1, false, 0, 0, null);// blank space
-		spaces[4][1].addInstruction(0, spaces[4][1], leverOn, color, false, 1, false, 0, 0, leverClick);// leverOn image
+		spaces[4][1].addInstruction(0, spaces[4][1], leverOn, color, false, 1, false, 0, 0, push);// leverOn image
 		spaces[4][1].addInstruction(1, spaces[4][1], lever, color, false, 0, false, 0, 0, leverClick);// back to lever
 		spaces[8][9].addInstruction(0, spaces[8][9], portal, color, true, 0, true, 9, 0, teleport);// portal 8 teleports
 																									// to portal 9

@@ -9,6 +9,10 @@ import javax.swing.JPanel;
 
 public class GameScreen extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// Frame Attributes
 	public final int WINDOW_HEIGHT = 1000;
 	public final int WINDOW_WIDTH = 1000;
@@ -21,11 +25,6 @@ public class GameScreen extends JFrame {
 	private int playerX;
 	private int playerY;
 	private ImageIcon playerPic;
-
-	// Enemy Attributes
-	private int enemyX;
-	private int enemyY;
-	private ImageIcon enemyPic;
 
 	// Zone Attributes
 	private Zone currentZone;
@@ -57,16 +56,7 @@ public class GameScreen extends JFrame {
 		playerX = currentZone.getPlayerStartX();
 		playerY = currentZone.getPlayerStartY();
 		playerPic = playerImage;
-		// Enemy setup
-		enemyX = currentZone.getEnemyStartX();
-		enemyY = currentZone.getEnemyStartY();
-		try {
-			enemyPic = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rockmonster.gif")));
-
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
-		}
-
+		
 		// Panel setup
 
 		for (int i = 0; i < 10; i++) {
@@ -113,8 +103,7 @@ public class GameScreen extends JFrame {
 			currentZone.enableZoneWarpSpaces();
 			playerX = currentZone.getPlayerStartX();
 			playerY = currentZone.getPlayerStartY();
-			enemyX = currentZone.getEnemyStartX();
-			enemyY = currentZone.getEnemyStartY();
+			
 
 			if (!oldBGMusic.equals(currentZone.getBackgroundMusic())) {
 				musicPlayer.stop();

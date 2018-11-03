@@ -76,16 +76,16 @@ public class Zone2 extends Zone {
 		spaces[4][8] = new Space(null, color, true, 0);
 		spaces[4][9] = new Space(null, color, true, 0);
 		// Set up row 5
-		spaces[5][0] = new Space(plant, color, true, 0);
-		spaces[5][1] = new Space(plant, color, true, 0);
-		spaces[5][2] = new Space(plant, color, true, 0); // bush
+		spaces[5][0] = new Space(plant, color, false, 0);
+		spaces[5][1] = new Space(plant, color, false, 0);
+		spaces[5][2] = new Space(plant, color, false, 0); // bush
 		spaces[5][3] = new Space(lightPillar, color, false, 0);
 		spaces[5][4] = new Space(null, Color.red, true, 0);
 		spaces[5][5] = new Space(null, Color.red, true, 0);
 		spaces[5][6] = new Space(lightPillar, color, false, 0);
-		spaces[5][7] = new Space(plant, color, true, 0);
-		spaces[5][8] = new Space(plant, color, true, 0);
-		spaces[5][9] = new Space(plant, color, true, 0);
+		spaces[5][7] = new Space(plant, color, false, 0);
+		spaces[5][8] = new Space(plant, color, false, 0);
+		spaces[5][9] = new Space(plant, color, false, 0);
 		// Set up row 6
 		spaces[6][0] = new Space(null, color, true, 0);
 		spaces[6][1] = new Space(TLfountain, color, true, 0);
