@@ -80,21 +80,21 @@ public class Zone {
 			TRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("toprightfountain.png")));
 			BLfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomleftfountain.png")));
 			BRfountain = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("bottomrightfountain.png")));
-			test = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("rojos.png")));
+			test = new ImageIcon(ImageIO.read(this.getClass().getResourceAsStream("Rojos.png")));
 		}
 		catch(IOException e) {
 			System.out.println(e.getMessage());
 		}
 		//Designated path for audio variables
 		//Music
-		zone1Music = "Audio/dungeon.wav";
+		zone1Music = "dungeon.wav";
 		
 		//Sound Effects
-		keyPickup = "Audio/keyPickup.wav";
-		push = "Audio/move.wav";
-		leverClick = "Audio/lever.wav";
-		lockClick = "Audio/lock.wav";
-		teleport = "Audio/teleport.wav";
+		keyPickup = "keyPickup.wav";
+		push = "move.wav";
+		leverClick = "lever.wav";
+		lockClick = "lock.wav";
+		teleport = "teleport.wav";
 	}
 	
 	

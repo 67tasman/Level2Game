@@ -1,5 +1,7 @@
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -14,11 +16,12 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 public class AudioPlayer implements LineListener {
 	Clip audioClip;
 	AudioInputStream audioStream;
-
+	InputStream BufferedStream;
 	public void play(String audioFilePath, int numTimes) {
-		File audioFile = new File(audioFilePath);
+		//File audioFile = new File(audioFilePath);
 		try {
-			audioStream = AudioSystem.getAudioInputStream(audioFile);
+		//	audioStream = AudioSystem.getAudioInputStream(audioFile);
+			audioStream = AudioSystem.getAudioInputStream(getClass().getResource("resources/" + audioFilePath));
 			AudioFormat format = audioStream.getFormat();
 			DataLine.Info info = new DataLine.Info(Clip.class, format);
 			audioClip = (Clip) AudioSystem.getLine(info);
